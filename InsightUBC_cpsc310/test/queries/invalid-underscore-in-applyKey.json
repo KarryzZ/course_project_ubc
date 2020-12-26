@@ -1,0 +1,30 @@
+{
+    "title": "apply avg, valid",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 98
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "avg_Avg"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "avg_Avg": {
+          "AVG": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"
+  }

@@ -1,0 +1,16 @@
+{
+    "title": "invalid since we query more than one dataset",
+    "query": {
+        "WHERE": {},
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_pass"
+          ],
+          "ORDER": "courses_pass"
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

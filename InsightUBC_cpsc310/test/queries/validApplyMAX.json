@@ -1,0 +1,29 @@
+{
+    "title": "apply max, valid",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cp*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "minAverage"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "minAverage": {
+          "MAX": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpen","minAverage":86.9},{"courses_dept":"cpsc","minAverage":95}]}

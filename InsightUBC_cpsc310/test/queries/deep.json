@@ -1,0 +1,55 @@
+{
+    "title": "valid query with no orders",
+    "query": {
+  "WHERE": {
+    "AND": [
+      {
+        "OR": [
+          {
+            "GT": {
+              "courses_avg": 30
+            }
+          },
+          {
+            "IS": {
+              "courses_dept": "**"
+            }
+          }
+        ]
+      },
+      {
+        "AND": [
+          {
+            "OR": [
+              {
+                "GT": {
+                  "courses_fail": 10
+                }
+              },
+              {
+                "IS": {
+                  "courses_uuid": "c*"
+                }
+              }
+            ]
+          },
+          {
+            "EQ": {
+              "courses_pass": 100
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "courses_id",
+      "courses_avg"
+    ],
+    "ORDER": "courses_avg"
+  }
+},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"busi","courses_id":"330","courses_avg":59.04},{"courses_dept":"busi","courses_id":"330","courses_avg":59.04},{"courses_dept":"math","courses_id":"220","courses_avg":63.6},{"courses_dept":"math","courses_id":"152","courses_avg":63.72},{"courses_dept":"math","courses_id":"200","courses_avg":66.17},{"courses_dept":"math","courses_id":"253","courses_avg":69.38},{"courses_dept":"mech","courses_id":"375","courses_avg":69.43},{"courses_dept":"math","courses_id":"200","courses_avg":69.93},{"courses_dept":"busi","courses_id":"101","courses_avg":70.3},{"courses_dept":"busi","courses_id":"101","courses_avg":72.08},{"courses_dept":"cpsc","courses_id":"110","courses_avg":73.83}]}

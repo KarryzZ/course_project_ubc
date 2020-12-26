@@ -1,0 +1,13 @@
+{
+    "title": "invalid missing options",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_max": 97
+            }
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

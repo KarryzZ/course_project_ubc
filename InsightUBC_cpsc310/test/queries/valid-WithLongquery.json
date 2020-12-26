@@ -1,0 +1,38 @@
+{
+    "title": "valid long query",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 85
+              }
+            },
+            {
+              "AND": [
+                {
+                  "IS": {
+                    "courses_dept": "cpsc"
+                  }
+                },
+                {
+                  "EQ": {
+                    "courses_year": 2014
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_id",
+            "courses_pass"
+          ],
+          "ORDER": "courses_pass"
+        }
+      },
+    "isQueryValid": true,
+    "result":[
+        {"courses_id":"589","courses_pass":1},{"courses_id":"544","courses_pass":11},{"courses_id":"513","courses_pass":11},{"courses_id":"490","courses_pass":15},{"courses_id":"547","courses_pass":17},{"courses_id":"210","courses_pass":40},{"courses_id":"540","courses_pass":54},{"courses_id":"110","courses_pass":60},{"courses_id":"319","courses_pass":68},{"courses_id":"221","courses_pass":119}]
+}

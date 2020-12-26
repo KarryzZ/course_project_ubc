@@ -1,0 +1,25 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+          "AND": [
+              {
+            "IS": {
+                "courses_dept": "M*th"
+                }
+            },
+            {
+            "GT":{
+               "courses_avg":99
+            }
+        }]
+    },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

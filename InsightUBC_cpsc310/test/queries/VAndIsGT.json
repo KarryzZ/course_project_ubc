@@ -1,0 +1,32 @@
+{
+    "title": "SELECT dept, id WHERE dept begin with a && pass == 100 ORDER BY id",
+    "query": {
+    	"WHERE": {
+    		"AND": [
+    			{
+    				"IS": {
+    					"courses_dept": "a*"
+    				}
+    			},
+    			{
+    				"GT": {
+    					"courses_pass": 800
+    				}
+    			}
+    		]
+    	},
+    	"OPTIONS": {
+    		"COLUMNS": [
+    			"courses_dept",
+    			"courses_id"
+    		],
+    		"ORDER": "courses_id"
+    	}
+    },
+    "isQueryValid": true,
+    "result": 
+    [
+        {"courses_dept":"apsc","courses_id":"100"},
+        {"courses_dept":"apsc","courses_id":"160"}
+    ]
+}

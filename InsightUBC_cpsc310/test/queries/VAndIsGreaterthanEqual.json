@@ -1,0 +1,46 @@
+{
+    "title": "SELECT id, pass WHERE dept is cpsc && avg > 90 && year == 2010 ORDER BY id",
+    "query":{
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                    "courses_dept": "cpsc"
+                }
+            },
+            {
+                "AND":[
+                    {
+                        "GT":{
+                            "courses_avg": 90
+                        }
+                    },
+                    {
+                        "EQ":{
+                            "courses_year": 2010
+                        }
+                    }
+                ]
+            }
+        ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_id",
+                "courses_pass"
+            ],
+            "ORDER":"courses_id"
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_id": "490",
+            "courses_pass": 6
+        },
+        {
+            "courses_id": "501",
+            "courses_pass": 4
+        }
+    ]
+}

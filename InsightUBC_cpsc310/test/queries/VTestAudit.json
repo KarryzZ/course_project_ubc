@@ -1,0 +1,24 @@
+{
+    "title": "SELECT dept, avg WHERE audit greater than 20",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_audit": 20
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit",
+                "courses_uuid",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_uuid"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_audit":23,"courses_uuid":"21789","courses_instructor":""},
+        {"courses_audit":21,"courses_uuid":"62475","courses_instructor":""},
+        {"courses_audit":21,"courses_uuid":"76489","courses_instructor":""}
+    ]
+}

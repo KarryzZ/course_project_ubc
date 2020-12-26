@@ -1,0 +1,29 @@
+{
+    "title": "Reference data set cannot be empty string",
+    "query": {
+        "WHERE": {
+          "OR": [
+            {
+              "GT": {
+                "_avg": 99
+              }
+            },
+            {
+              "GT": {
+                "_fail":273
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "_dept",
+            "_id",
+            "_pass"
+          ],
+          "ORDER": "_pass"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

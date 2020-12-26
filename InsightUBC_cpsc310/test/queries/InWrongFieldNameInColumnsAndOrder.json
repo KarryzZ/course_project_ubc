@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 1, but Invalid value type in COLUMNS",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_avg": 99
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_deptmmm",
+                "courses_avg"
+            ],
+            "ORDER": "courses_deptmmm"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,18 @@
+{
+    "title": "SELECT dept, avg BUT invalid filter key",
+    "query": {
+        "WHERE": {
+            "YES": {
+                "courses_avg": 99
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

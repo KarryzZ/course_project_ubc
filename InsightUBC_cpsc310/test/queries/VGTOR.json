@@ -1,0 +1,29 @@
+{
+    "title": "SELECT dept, id, pass WHERE avg > 99 || pass > 2600 ORDER BY id",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                	"GT": {
+                	"courses_avg": 99
+                }
+            },
+            {
+            	"LT": {
+            		"courses_pass": 98
+            	}
+            }
+        ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            	"courses_dept",
+                "courses_id",
+                "courses_pass"
+            ],
+            "ORDER": "courses_id"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"math","courses_id":"527","courses_pass":9},{"courses_dept":"math","courses_id":"527","courses_pass":9},{"courses_dept":"cnps","courses_id":"574","courses_pass":16}]
+}

@@ -1,0 +1,29 @@
+{
+    "title": "invalid since we query more than one dataset",
+    "query": {
+        "WHERE": {
+          "OR": [
+            {
+              "GT": {
+                "courses_avg": 99
+              }
+            },
+            {
+              "GT": {
+                "courses_fail":273
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "coursesSmall_dept",
+            "courses_id",
+            "courses_pass"
+          ],
+          "ORDER": "courses_pass"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

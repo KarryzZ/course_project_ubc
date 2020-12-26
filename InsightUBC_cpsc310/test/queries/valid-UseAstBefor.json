@@ -1,0 +1,29 @@
+{
+    "title": "valid query with the use of * after and EQ",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_dept": "p*"
+              }
+            },
+            {
+              "EQ": {
+                "courses_pass": 300
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ],
+          "ORDER" : "courses_id"
+        }
+      },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"psyc","courses_id":"101","courses_avg":67.69},{"courses_dept":"psyc","courses_id":"102","courses_avg":69.94}]
+}

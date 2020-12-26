@@ -1,0 +1,33 @@
+{
+    "title": "SELECT dept, avg WHERE fail greater than 250",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_fail": 250
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_fail",
+                "courses_audit",
+                "courses_uuid",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_fail"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"strctr bond chem","courses_fail":251,"courses_audit":0,
+        "courses_uuid":"89218","courses_instructor":""},
+        {"courses_title":"structural chem","courses_fail":260,"courses_audit":0,
+        "courses_uuid":"82096","courses_instructor":""},
+        {"courses_title":"strctr bond chem","courses_fail":264,"courses_audit":0,
+        "courses_uuid":"31631","courses_instructor":""},
+        {"courses_title":"structural chem","courses_fail":266,"courses_audit":0,
+        "courses_uuid":"31192","courses_instructor":""},
+        {"courses_title":"structural chem","courses_fail":287,"courses_audit":0,
+        "courses_uuid":"70069","courses_instructor":""}
+    ]
+}

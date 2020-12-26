@@ -1,0 +1,29 @@
+{
+    "title": "invalid equal value types should be number",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_dept": "p*"
+              }
+            },
+            {
+              "EQ": {
+                "courses_pass": "CPSC310"
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ],
+          "ORDER": "courses_id"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

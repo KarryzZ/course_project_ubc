@@ -1,0 +1,17 @@
+{
+    "title": "invalid Is key type",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_avg": "A+"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_id"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

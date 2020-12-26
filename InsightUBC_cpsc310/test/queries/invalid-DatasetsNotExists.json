@@ -1,0 +1,29 @@
+{
+    "title": "invalid: coursesSmall not added",
+    "query": {
+        "WHERE": {
+          "OR": [
+            {
+              "GT": {
+                "coursesSmall_avg": 99
+              }
+            },
+            {
+              "GT": {
+                "courses_fail":273
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "coursesSmall_dept",
+            "coursesSmall_id",
+            "coursesSmall_pass"
+          ],
+          "ORDER": "coursesSmall_pass"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

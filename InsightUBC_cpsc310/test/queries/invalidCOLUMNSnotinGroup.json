@@ -1,0 +1,23 @@
+{
+    "title": "keys in COLUMNS not in GROUP",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 99
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_id"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": []
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"
+}

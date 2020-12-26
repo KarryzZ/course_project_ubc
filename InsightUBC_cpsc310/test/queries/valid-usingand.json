@@ -1,0 +1,54 @@
+{
+    "title": "valid query with course average being 90-ish and 2 people failed",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 90
+              }
+            },
+            {
+              "GT": {
+                "courses_fail": 1
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg",
+            "courses_instructor"
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept":"cons",
+            "courses_id":"101",
+            "courses_avg":90.1,
+            "courses_instructor":"arcese, peter"
+        },
+        {
+            "courses_dept":"cons",
+            "courses_id":"101",
+            "courses_avg":90.1,
+            "courses_instructor":""
+        },
+        {
+            "courses_dept":"epse",
+            "courses_id":"406",
+            "courses_avg":92.26,
+            "courses_instructor":"el khatib, lara"
+        },
+        {
+            "courses_dept":"epse",
+            "courses_id":"406",
+            "courses_avg":92.5,
+            "courses_instructor":""
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "title": "SELECT dept, avg WHERE instructor begin with ait",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_instructor": "ait*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_fail",
+                "courses_audit",
+                "courses_uuid",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_fail"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"intrmd paint i","courses_fail":0,"courses_audit":1,
+        "courses_uuid":"52517","courses_instructor":"aitken, stephanie"},
+        {"courses_title":"painting","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"60198","courses_instructor":"aitken, stephanie"},
+        {"courses_title":"painting","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"52489","courses_instructor":"aitken, stephanie"},
+        {"courses_title":"bsc thesis","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"34949","courses_instructor":"aitken, sally;marshall, peter"},
+        {"courses_title":"bsc thesis","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"21299","courses_instructor":"aitken, sally;marshall, peter"},
+        {"courses_title":"bsc thesis","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"7398","courses_instructor":"aitken, sally;marshall, peter"},
+        {"courses_title":"intgrtd fld schl","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"42714","courses_instructor":"aitken, sally;hinch, scott;lavallee, susanne"},
+        {"courses_title":"for plant bio ii","courses_fail":3,"courses_audit":0,
+        "courses_uuid":"34872","courses_instructor":"aitken, sally"},
+        {"courses_title":"for plant bio ii","courses_fail":4,"courses_audit":0,
+        "courses_uuid":"7320","courses_instructor":"aitken, sally"},
+        {"courses_title":"for plant bio ii","courses_fail":5,"courses_audit":0,
+        "courses_uuid":"89537","courses_instructor":"aitken, sally;guy, robert"},
+        {"courses_title":"for plant bio ii","courses_fail":6,"courses_audit":0,
+        "courses_uuid":"54902","courses_instructor":"aitken, sally"},
+        {"courses_title":"for plant bio ii","courses_fail":7,"courses_audit":0,
+        "courses_uuid":"97633","courses_instructor":"aitken, sally"},
+        {"courses_title":"for plant bio ii","courses_fail":9,"courses_audit":0,
+        "courses_uuid":"21228","courses_instructor":"aitken, sally"},
+        {"courses_title":"for plant bio i","courses_fail":9,"courses_audit":0,
+        "courses_uuid":"89532","courses_instructor":"aitken, sally;guy, robert"}
+    ]
+}

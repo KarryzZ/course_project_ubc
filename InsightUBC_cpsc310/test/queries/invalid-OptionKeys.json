@@ -1,0 +1,30 @@
+{
+    "title": "invalid keys in Options, Second key should be order",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_dept": "*sc"
+              }
+            },
+            {
+              "EQ": {
+                "courses_pass": 300
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ],
+          "CPSC310": "courses_id"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

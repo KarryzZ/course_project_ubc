@@ -1,0 +1,30 @@
+{
+    "title": "apply sum, invalid key type in SUM",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 98
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_id",
+      "totalPass"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_id"
+    ],
+    "APPLY": [
+      {
+        "totalPass": {
+          "SUM": "courses_id"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"
+}

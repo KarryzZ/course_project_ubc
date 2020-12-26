@@ -1,0 +1,22 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 90 && dept is econ, but WHERE have multiple keys",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 90
+            },
+            "IS": {
+                "courses_dept": "econ"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            	"courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

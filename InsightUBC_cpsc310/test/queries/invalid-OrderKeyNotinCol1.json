@@ -1,0 +1,21 @@
+{
+    "title": "valid order value",
+    "query": {
+        "WHERE": {
+          "NOT": {
+            "LT": {
+              "courses_avg": 99.5
+            }
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_avg"
+          ],
+          "ORDER": "   "
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

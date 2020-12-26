@@ -1,0 +1,19 @@
+{
+    "title": "invalid: Or should not be empty",
+    "query": {
+        "WHERE": {
+          "OR": [
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_pass"
+          ],
+          "ORDER": "courses_pass"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

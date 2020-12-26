@@ -1,0 +1,34 @@
+{
+    "title": "new ORDER, but missing keys",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 98
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_id",
+      "counts"
+    ],
+    "ORDER": {
+      "dir": "UP"
+    }
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept",
+      "courses_id"
+    ],
+    "APPLY": [
+      {
+        "counts": {
+          "COUNT": "courses_uuid"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"
+  }

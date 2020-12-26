@@ -1,0 +1,17 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 1, but empty array after GT",
+    "query": {
+        "WHERE": {
+            "GT": ""
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+            	"courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

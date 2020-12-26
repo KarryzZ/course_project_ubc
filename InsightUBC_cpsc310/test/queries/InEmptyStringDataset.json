@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, id WHERE pass > 50, but Cannot query empty dataset",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "_pass": 50
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "_dept",
+                "_id"
+            ],
+            "ORDER": "courses_id"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

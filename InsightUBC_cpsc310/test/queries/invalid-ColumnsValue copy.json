@@ -1,0 +1,21 @@
+{
+    "title": "invalid with wrong column fields",
+    "query": {
+        "WHERE": {
+          "NOT": {
+            "LT": {
+              "courses_avg": 99.5
+            }
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_department",
+            "courses_avg"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

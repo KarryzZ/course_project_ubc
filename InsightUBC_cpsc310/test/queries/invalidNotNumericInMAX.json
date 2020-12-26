@@ -1,0 +1,30 @@
+{
+    "title": "apply max, invalid key type in MAX",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cp*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "minAverage"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "minAverage": {
+          "MAX": "courses_id"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"
+}

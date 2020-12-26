@@ -1,0 +1,37 @@
+{
+    "title": "invalid: empty String GT",
+    "query": {
+        "WHERE": {
+          "OR": [
+            {
+              "AND": [
+                {
+                  "LT": {
+                  }
+                },
+                {
+                  "IS": {
+                    "courses_dept": "CPSC310"
+                  }
+                }
+              ]
+            },
+            {
+              "EQ": {
+                "courses_avg": 95
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

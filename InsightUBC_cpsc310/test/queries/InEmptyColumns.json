@@ -1,0 +1,25 @@
+{
+    "title": "Empty COLUMNS",
+    "query": {
+    	"WHERE": {
+    		"AND": [
+    			{
+    				"IS": {
+    					"courses_dept": "*a"
+    				}
+    			},
+    			{
+    				"EQ": {
+    					"courses_pass": 100
+    				}
+    			}
+    		]
+    	},
+    	"OPTIONS": {
+    		"COLUMNS": [		
+    		]
+    	}
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

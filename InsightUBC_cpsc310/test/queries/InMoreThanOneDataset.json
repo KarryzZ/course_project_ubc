@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, id WHERE pass > 50, but Cannot query more than one dataset",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_pass": 50
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "whitespace_id"
+            ],
+            "ORDER": "courses_id"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

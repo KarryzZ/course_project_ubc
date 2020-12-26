@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, id WHERE pass > 50, but ORDER key must be in COLUMNS",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_pass": 50
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

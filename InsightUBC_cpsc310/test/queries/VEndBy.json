@@ -1,0 +1,31 @@
+{
+    "title": "SELECT dept, id WHERE dept end by a && pass == 100 ORDER BY id",
+    "query": {
+    	"WHERE": {
+    		"AND": [
+    			{
+    				"IS": {
+    					"courses_dept": "*a"
+    				}
+    			},
+    			{
+    				"EQ": {
+    					"courses_pass": 100
+    				}
+    			}
+    		]
+    	},
+    	"OPTIONS": {
+    		"COLUMNS": [
+    			"courses_dept",
+    			"courses_id"
+    		],
+    		"ORDER": "courses_id"
+    	}
+    },
+    "isQueryValid": true,
+    "result": [
+        {"courses_dept":"asia","courses_id":"355"},
+        {"courses_dept":"asia","courses_id":"355"}
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "title": "SELECT dept, avg WHERE title contain pathy",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_title": "*pathy*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_title",
+                "courses_fail",
+                "courses_audit",
+                "courses_uuid",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_fail"
+        }
+    },
+    "isQueryValid": true,
+    "result":[
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"89843","courses_instructor":""},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"89842","courses_instructor":"johnston, charlotte"},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"78256","courses_instructor":""},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"78255","courses_instructor":"johnston, charlotte"},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"31591","courses_instructor":""},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":0,
+        "courses_uuid":"31590","courses_instructor":"johnston, charlotte"},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":1,
+        "courses_uuid":"28004","courses_instructor":""},
+        {"courses_title":"psycopathy child","courses_fail":0,"courses_audit":1,
+        "courses_uuid":"28003","courses_instructor":"johnston, charlotte"}
+    ]
+}

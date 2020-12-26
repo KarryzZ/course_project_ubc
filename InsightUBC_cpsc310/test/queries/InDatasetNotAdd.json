@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97, but references a dataset not added",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "cour_avg": 97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "cour_dept",
+                "cour_avg"
+            ],
+            "ORDER": "cour_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

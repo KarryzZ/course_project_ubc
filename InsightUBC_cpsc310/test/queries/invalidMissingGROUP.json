@@ -1,0 +1,27 @@
+{
+    "title": "TRANSFORMATION missing GROUP",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 99
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_id"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "APPLY": [
+      {
+        "maxAvg": {
+          "MAX": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":
+    "InsightError"
+}

@@ -1,0 +1,36 @@
+{
+    "title": "invalid Result too large with Trans",
+    "query": {
+        "WHERE": {
+          "GT": {
+            "courses_avg": 80
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_uuid",
+            "counts"
+          ],
+          "ORDER": {
+            "dir": "UP",
+            "keys": [
+              "courses_uuid"
+            ]
+          }
+        },
+        "TRANSFORMATIONS": {
+          "GROUP": [
+            "courses_uuid"
+          ],
+          "APPLY": [
+            {
+              "counts": {
+                "COUNT": "courses_uuid"
+              }
+            }
+          ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "ResultTooLargeError"
+}

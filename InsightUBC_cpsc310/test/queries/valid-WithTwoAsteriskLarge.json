@@ -1,0 +1,30 @@
+{
+    "title": "valid query with two *",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_dept": "*n*"
+              }
+            },
+            {
+              "GT": {
+                "courses_avg": 99
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_title",
+            "courses_uuid",
+            "courses_audit",
+            "courses_instructor"
+          ],
+          "ORDER" : "courses_instructor"
+        }
+      },
+    "isQueryValid": true,
+    "result":[{"courses_title":"career planning","courses_uuid":"26777","courses_audit":0,"courses_instructor":"cox, daniel"}]
+}

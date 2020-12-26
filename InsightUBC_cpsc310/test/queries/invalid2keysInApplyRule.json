@@ -1,0 +1,37 @@
+{
+    "title": "Apply rule should only have 1 key, has 2",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cp*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "minAverage"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "minAverage": {
+          "MIN": "courses_avg"
+        },
+        "maxAverage": {
+          "MAX": "courses_avg"
+        }
+      },
+      {
+        "Average": {
+          "MIN": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result": "InsightError"}

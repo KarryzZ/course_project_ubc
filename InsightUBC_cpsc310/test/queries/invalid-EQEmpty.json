@@ -1,0 +1,28 @@
+{
+    "title": "invalid Empty after equal",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_dept": "p*"
+              }
+            },
+            {
+              "EQ": {
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ],
+          "ORDER": "courses_id"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,36 @@
+{
+    "title": "apply avg, valid",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 98
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "avgAvg"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "avgAvg": {
+          "AVG": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": true,
+    "result":[
+      {"courses_dept":"cnps","avgAvg":99.19},
+      {"courses_dept":"eece","avgAvg":98.75},
+      {"courses_dept":"epse","avgAvg":98.55},
+      {"courses_dept":"math","avgAvg":99.78},
+      {"courses_dept":"nurs","avgAvg":98.5},
+      {"courses_dept":"spph","avgAvg":98.98}]
+  }

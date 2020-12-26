@@ -1,0 +1,19 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 1, but ORDER is not a string",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_id": "99"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": 1
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,27 @@
+{
+    "title": "SELECT id, pass BUT invalid type in COLUMNS",
+    "query":{
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                    "courses_dept": "cpsc"
+                }
+            },
+            {
+                "EQ": {
+                    "courses_avg": 79
+                }
+            }
+        ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "yes"
+            ],
+            "ORDER":"courses_id"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

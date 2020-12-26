@@ -1,0 +1,29 @@
+{
+    "title": "apply count on string data, valid",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cp*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "countID"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "countID": {
+          "COUNT": "courses_id"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpen","countID":18},{"courses_dept":"cpsc","countID":53}]}

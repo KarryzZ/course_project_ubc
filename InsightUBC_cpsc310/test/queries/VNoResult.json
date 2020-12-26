@@ -1,0 +1,29 @@
+{
+    "title": "SELECT dept, id WHERE dept begin with a && pass == 100 ORDER BY id",
+    "query": {
+    	"WHERE": {
+    		"AND": [
+    			{
+    				"GT": {
+    					"courses_avg": 1
+    				}
+    			},
+    			{
+    				"LT": {
+    					"courses_avg": -1
+    				}
+    			}
+    		]
+    	},
+    	"OPTIONS": {
+    		"COLUMNS": [
+    			"courses_dept",
+    			"courses_id"
+    		],
+    		"ORDER": "courses_id"
+    	}
+    },
+    "isQueryValid": true,
+    "result": [
+    ]
+}

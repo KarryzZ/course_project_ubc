@@ -1,0 +1,44 @@
+{
+    "title": "valid new ORDER",
+    "query": {
+  "WHERE": {
+    "GT": {
+      "courses_avg": 99
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_id",
+      "counts",
+      "avgAVG"
+    ],
+    "ORDER": {
+      "dir": "UP",
+      "keys": ["courses_id"]
+    }
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept",
+      "courses_id"
+    ],
+    "APPLY": [
+      {
+        "counts": {
+          "COUNT": "courses_uuid"
+        }
+       },
+       {
+        "avgAVG": {
+          "AVG": "courses_pass"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": true,
+    "result":[
+      {"courses_id":"527","counts":2,"avgAVG":9},
+      {"courses_id":"574","counts":1,"avgAVG":16}
+    ]
+  }

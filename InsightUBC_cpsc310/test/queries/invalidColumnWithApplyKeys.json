@@ -1,0 +1,16 @@
+{
+    "title": "apply count on numeric data, valid",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cps*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "aaa"
+    ]
+  }
+},
+    "isQueryValid": false,
+    "result":"InsightError"}

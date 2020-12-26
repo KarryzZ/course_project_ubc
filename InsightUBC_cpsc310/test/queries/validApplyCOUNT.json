@@ -1,0 +1,29 @@
+{
+    "title": "apply count on numeric data, valid",
+    "query": {
+  "WHERE": {
+    "IS": {
+      "courses_dept": "cp*"
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": [
+      "courses_dept",
+      "countAverage"
+    ]
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": [
+      "courses_dept"
+    ],
+    "APPLY": [
+      {
+        "countAverage": {
+          "COUNT": "courses_avg"
+        }
+      }
+    ]
+  }
+},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"cpen","countAverage":30},{"courses_dept":"cpsc","countAverage":621}]}

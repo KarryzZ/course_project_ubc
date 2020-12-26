@@ -1,0 +1,20 @@
+{
+    "title": "invalid query with invalid key courses_max",
+    "query": {
+        "WHERE": {
+          "GT": {
+            "courses_max": 97
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_avg"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}
+

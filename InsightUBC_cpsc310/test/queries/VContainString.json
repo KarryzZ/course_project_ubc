@@ -1,0 +1,33 @@
+{
+    "title": "SELECT dept, avg WHERE dept has ab && pass == 100 ORDER BY id",
+    "query": {
+    	"WHERE": {
+    		"AND": [
+    			{
+    				"IS": {
+    					"courses_dept": "*ab*"
+    				}
+    			},
+    			{
+    				"EQ": {
+    					"courses_pass": 100
+    				}
+    			}
+    		]
+    	},
+    	"OPTIONS": {
+    		"COLUMNS": [
+    			"courses_dept",
+    			"courses_id"
+    		],
+    		"ORDER": "courses_id"
+    	}
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "babs",
+            "courses_id": "540"
+        }
+    ]
+}

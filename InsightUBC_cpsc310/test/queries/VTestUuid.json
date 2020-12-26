@@ -1,0 +1,20 @@
+{
+    "title": "SELECT dept, avg WHERE uuid is 31379",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_uuid": "31379"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_audit",
+                "courses_uuid",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_uuid"
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_audit":9,"courses_uuid":"31379","courses_instructor":""}]
+}
